@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="effect.js">
+</head>
+<body>
+    <div class="container">
+        <div class="all-container">
+            <img src="images/logo.png" alt="Logo" class="logo">
+            <h1 class="title-container">Add plants to <br>your living space</h1>
+            <p class="prg-container">Plants are an inexpensivve means to accessorizing your space and <br> adding color and texture.</p>
+        
+            <button class="btn-container" type="button">LEARN MORE</button>
+        </div>
+        <div class="cont-right">
+            <img src="images/pic-1.jpg" alt="pic1" class="pic">
+            <div class="cont-right-text">
+                <h1 class="title-cont-right">Where can i find ideas for small rooms?</h1>
+                <hr>
+                <p class="prg-cont-right">
+                    They can absorb pollutacts and remove hrmgul gass form the air. no home<br>should be withou these
+                    worderful greens! Designing small rooms comes with a <br>
+                    complentely different challengs.
+                </p>
+                <div class="btn-right">
+                    <img src="images/back.png" id="back">
+                    <h1 class="bar">|</h1>
+                    <img src="images/next.png" id="next">
+                </div>
+            </div>
+        </div>
+    </div>
+    <script>
+        var pic = document.querySelector(".pic");
+        var back = document.getElementById("back");
+        var next = document.getElementById("next");
+
+        var picImages = [
+            "images/pic-1.jpg",
+            "images/pic-2.jpg",
+            "images/pic-3.jpg",
+            "images/pic-4.jpg",
+        ];
+        let i =0;
+        next.onclick= function(){
+            if(i < picImages.length -1){
+                i++;
+                pic.src = picImages[i];
+            }
+        };
+        back.onclick= function(){
+            if(i > 0){
+                i--;
+                pic.src = picImages[0];
+            }
+        };
+    </script>
+</body>
+</html>
